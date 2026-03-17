@@ -12,13 +12,12 @@
 
 
 fn factorial(n: u32) -> u32 {
-    if (n == 0) || (n == 1) { return 1 }
-    else if (n == 2) {return 2}
-    else if (n == 5) {return 120}
-    else {
-        return 0
+    if n == 0 {
+        1
     }
-    
+    else {
+        n*factorial(n-1)   
+    }
 }
 
 #[cfg(test)]
