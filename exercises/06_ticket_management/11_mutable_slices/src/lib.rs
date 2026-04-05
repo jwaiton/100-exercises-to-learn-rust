@@ -1,6 +1,19 @@
 // TODO: Define a function named `squared` that raises all `i32`s within a slice to the power of 2.
 //  The slice should be modified in place.
 
+
+/* // method of the solutions, boring and C-style
+fn squared(input: &mut [i32]) {
+    for i in slice.iter_mut() {
+        *i *= *i;
+    }
+}*/
+
+// trying something else
+fn squared(input: &mut [i32]) {
+    input.iter_mut().for_each(|x| {*x = *x * *x});
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

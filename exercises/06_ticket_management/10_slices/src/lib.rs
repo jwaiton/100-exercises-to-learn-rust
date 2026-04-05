@@ -1,6 +1,18 @@
 // TODO: Define a function named `sum` that takes a reference to a slice of `u32` and returns the sum of all
 //  elements in the slice.
 
+/* // my wacky method thats generic af based on compiler feedback
+fn sum<T>(input: &[T]) -> u32 where u32: for<'a> std::iter::Sum<&'a T>{
+    let x = input.iter().sum();
+    return x
+}
+*/
+
+// the simple way
+fn sum(input: &[u32]) -> u32 {
+    input.iter().sum()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
